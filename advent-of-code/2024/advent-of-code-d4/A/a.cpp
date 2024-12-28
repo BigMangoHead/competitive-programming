@@ -18,7 +18,7 @@ int main(void) {
                 for (auto & d : dir) {
                     int x = d.first;
                     int y = d.second;
-                    if (i + 3*x < 0 || i + 3*x >= data.size() || i + 3*y < 0 || i + 3*y >= data[0].size()) {
+                    if (i + 3*x < 0 || i + 3*x >= data.size() || j + 3*y < 0 || j + 3*y >= data[i].size()) {
                         continue;
                     }
                     for (int n=1; n <= 3; n++) {

@@ -3,3 +3,7 @@ build/
 *.exe
 *.pdb
 *.ilk
+
+# Ignore notes files
+*.rnote
+*.pdf
