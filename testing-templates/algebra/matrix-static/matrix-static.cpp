@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-#include "/home/bigma/coding/comp/templates/algebra/matrix-static.cpp"
-#include "/home/bigma/coding/comp/templates/number-theory/modint-simple.cpp"
+#include "/home/bigma/coding/comp/templates/algebra/square-matrix-static.cpp"
+//#include "/home/bigma/coding/comp/templates/number-theory/modint-simple.cpp"
 #define ll long long
 
 using llmatrix = StaticSquareMatrix<long long, 2>;
-using modmatrix = StaticSquareMatrix<ModInt<100>, 2>;
+//using modmatrix = StaticSquareMatrix<ModInt<100>, 2>;
 
 void run() {
     matrix m;
@@ -17,13 +17,8 @@ void run() {
 
     cout << m.pow(3);
 
-    modmatrix m2;
-    m2.vals[0][0] = 3;
-    m2.vals[1][0] = 0;
-    m2.vals[1][1] = 3;
-    m2.vals[0][1] = 0;
-
-    cout << m2.pow(5).vals[0][0].val;
+    cout << m[1][1] << endl;
+    cout << m.pow(3)[1][1] << endl;
 }
 
 int main(void) {

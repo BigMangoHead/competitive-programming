@@ -1,3 +1,4 @@
+// Named "static" because size must be determined at compile time.
 template <typename T, int size>
 struct StaticSquareMatrix {
     T vals[size][size] = {}; // row, column
@@ -37,6 +38,10 @@ struct StaticSquareMatrix {
                 res[i][j] = vals[i][j] + other.vals[i][j];
             }
         }
+    }
+
+    int* operator[](int pos) {
+        return vals[pos];
     }
 
     friend ostream& operator<<(ostream& os, const StaticSquareMatrix& m) {

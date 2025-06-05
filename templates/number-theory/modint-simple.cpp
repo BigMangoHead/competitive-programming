@@ -52,4 +52,5 @@ struct ModInt {
     }
 };
 
+using mint = ModInt<1000000007>;
 using mint = ModInt<998244353>;
